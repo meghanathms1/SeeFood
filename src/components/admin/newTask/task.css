@@ -1,0 +1,271 @@
+.admin-new-task-container {
+    width: 100%;
+    height: 100vh;
+    padding-left: 15vw;
+    padding-top: 70px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background: #f5f7fa;
+}
+
+.admin-new-task {
+    width: 98%;
+    height: 100%;
+}
+
+.admin-new-task-table-title-div {
+    padding-left: 20px;
+    color: #4a5568;
+}
+
+.admin-new-task-table-container {
+    background: #f5f7fa;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding-top: 20px;
+    overflow: hidden;
+}
+.admin-new-task-table-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00c4ff, #0073ce, #4f46e5);
+    border-radius: 15px 15px 0 0;
+}
+
+.admin-new-task-table-wrapper {
+    overflow-x: auto;
+    max-height: 82vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 transparent;
+}
+
+.admin-new-task-table-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00c4ff, #0073ce, #4f46e5);
+    border-radius: 15px 15px 0 0;
+}
+
+.admin-new-task-task-table {
+    width: max-content;
+    border-collapse: collapse;
+    table-layout: fixed;
+    position: relative;
+}
+
+.admin-new-task-table-header {
+    position: sticky;
+    top: 0;
+    background-color: #f9fafb;
+    z-index: 10;
+}
+
+.admin-new-task-table-th {
+    padding: 16px 24px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.admin-new-task-table-body {
+    background: #f5f7fa;
+    text-align: center;
+}
+
+.admin-new-task-table-row {
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease;
+}
+
+.admin-new-task-table-row:hover {
+    background-color: #f9fafb;
+}
+
+.admin-new-task-table-td {
+    padding: 16px 24px;
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Task ID */
+.task-id-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+/* Task Name & Description */
+.task-name {
+    font-weight: 500;
+    color: #111827;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.task-description {
+    color: #6b7280;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+/* Task Date */
+.task-date {
+    white-space: nowrap;
+    color: #6b7280;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-completed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-in-progress {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-on-hold {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Department */
+.admin-new-task-department-name {
+    font-weight: 500;
+    color: #111827;
+    white-space: nowrap;
+}
+
+/* Assignee */
+.admin-new-task-assignee-container {
+    display: flex;
+    align-items: center;
+}
+
+.admin-new-task-assignee-info {
+    flex: 1;
+}
+
+.admin-new-task-assignee-name {
+    font-weight: 500;
+    color: #111827;
+    white-space: nowrap;
+}
+
+/* Action Buttons */
+.admin-new-task-action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.admin-new-task-action-btn {
+    background-color: #dc2100;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+     padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.admin-new-task-action-btn:hover {
+    background-color: #00972b;
+}
+
+/* Approve Button */
+.admin-new-task-approve-btn {
+    background: #007e24;
+    color: white;
+}
+
+.admin-new-task-approve-btn:hover {
+    background: #00942a;
+}
+
+/* Sticky Actions Column */
+.admin-new-task-task-table .admin-new-task-table-th:last-child,
+.admin-new-task-task-table .admin-new-task-table-td:last-child {
+    position: sticky;
+    right: 0;
+    background-color: #f9fafb;
+    z-index: 5;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-new-task-table-th,
+    .admin-new-task-table-td {
+        padding: 12px 16px;
+    }
+
+    .task-name,
+    .task-description {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 640px) {
+    .admin-new-task-table-th,
+    .admin-new-task-table-td {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .task-name,
+    .task-description {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-description {
+        display: none;
+    }
+
+    .admin-new-task-table-th:nth-child(3),
+    .admin-new-task-table-td:nth-child(3) {
+        display: none;
+    }
+}

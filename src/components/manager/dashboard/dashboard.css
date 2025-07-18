@@ -1,0 +1,14 @@
+.manager-main-container {
+    width: 100%;
+    height: 100vh;
+    padding-left: 15vw;
+    padding-top: 70px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background: #f5f6fa;
+}
+.manager-main {
+    width: 98%;
+    height: 100%;
+}

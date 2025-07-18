@@ -1,0 +1,207 @@
+.admin-overdue-task-container {
+    width: 68%;
+    background: #f5f7fa;
+    border-radius: 12px;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d1d1d1;
+}
+
+.admin-overdue-task-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00c4ff, #0073ce, #4f46e5);
+    border-radius: 12px 12px 0 0;
+}
+
+.admin-overdue-task-container h3 {
+    margin: 0;
+    padding: 24px 24px 0;
+    border-bottom: none;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.admin-table-wrapper {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.admin-table-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.admin-table-wrapper::-webkit-scrollbar-track {
+    border-radius: 3px;
+}
+
+.admin-table-wrapper::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.admin-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.admin-running-tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    font-size: 14px;
+    margin: 16px 0 0 0;
+}
+
+.admin-running-tasks-table-heading {
+    padding: 16px 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #000000;
+    font-size: 13px;
+    background: #f5f7fa;
+    border-bottom: 1px solid #f2f2f2;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1px 0 0 #f1f5f9;
+}
+
+.admin-running-tasks-table td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #f8fafc;
+    color: #374151;
+    font-size: 14px;
+    background: transparent;
+    text-align: center;
+}
+
+.admin-running-tasks-table td:nth-child(2) {
+    text-align: left;
+    font-weight: 500;
+}
+
+.admin-running-tasks-table-body-row {
+    border-bottom: 1.6px solid rgb(232, 231, 231);
+}
+
+.admin-running-tasks-table tbody tr:hover {
+    background: #f8fafc;
+    transition: background-color 0.15s ease;
+}
+
+.admin-running-tasks-table tbody tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 24px;
+}
+
+.admin-task-id span {
+    background: #2563eb;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
+}
+
+.admin-deadline-badge {
+    background: #ef4444;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+.admin-status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+.admin-status-badge.in-progress {
+    background: #10b981;
+    color: white;
+}
+
+.admin-status-badge.pending {
+    background: #f59e0b;
+    color: white;
+}
+
+.admin-status-badge.on-hold {
+    background: #ef4444;
+    color: white;
+}
+
+.admin-status-badge.completed {
+    background: #6366f1;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .admin-overdue-task-container {
+        width: 100%;
+    }
+    
+    .admin-running-tasks-table-heading,
+    .admin-running-tasks-table td {
+        padding: 12px 8px;
+        font-size: 12px;
+    }
+    
+    .admin-overdue-task-container h3 {
+        padding: 20px 16px 0;
+        font-size: 16px;
+    }
+    
+    .admin-task-id span,
+    .admin-deadline-badge,
+    .admin-status-badge {
+        padding: 3px 6px;
+        font-size: 11px;
+        min-width: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-running-tasks-table-heading,
+    .radmin-unning-tasks-table td {
+        padding: 10px 6px;
+        font-size: 11px;
+    }
+    
+    .admin-running-tasks-table-heading {
+        font-size: 11px;
+    }
+    
+    .admin-task-id span,
+    .admin-deadline-badge,
+    .admin-status-badge {
+        padding: 2px 4px;
+        font-size: 10px;
+        min-width: 40px;
+    }
+}

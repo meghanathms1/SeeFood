@@ -1,0 +1,357 @@
+.ceo-task-container {
+    width: 100%;
+    height: 100vh;
+    padding-left: 15vw;
+    padding-top: 70px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background: #f5f7fa;
+}
+.ceo-task {
+    width: 98%;
+    height: 100%;
+}
+.ceo-task-table {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background: #f5f7fa;
+    border-radius: 12px;
+    border: 1px solid #d1d1d1;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Task Table Styles */
+
+/* Main Container */
+.task-container {
+    min-height: 50vh ;
+    background-color: #f5f7fa;
+    text-align: center;
+}
+
+/* Header Styles */
+.task-header {
+    margin-bottom: 32px;
+}
+
+/* Table Container */
+.ceo-table-container {
+    background: #f5f7fa;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.ceo-table-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00c4ff, #0073ce, #4f46e5);
+    border-radius: 15px 15px 0 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    max-height: 82vh; /* adjust as needed */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 transparent;
+}
+
+.table-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00c4ff, #0073ce, #4f46e5);
+    border-radius: 15px 15px 0 0;
+}
+.task-table {
+    width: max-content;
+    border-collapse: collapse;
+    table-layout: fixed;
+    position: relative;
+}
+
+.table-header {
+    position: sticky;
+    top: 0;
+    background-color: #f9fafb;
+    z-index: 10; /* ensures it stays above the rows while scrolling */
+}
+
+.table-th {
+    padding: 16px 24px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+/* Table Body */
+.table-body {
+    background: #f5f7fa;
+    text-align: center;
+}
+
+.table-row {
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+    background-color: #f9fafb;
+}
+
+.table-td {
+    padding: 16px 24px;
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Task ID Badge */
+.task-id-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.task-name {
+    font-weight: 500;
+    color: #111827;
+    max-width: 300px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.task-description {
+    color: #6b7280;
+    max-width: 300px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+/* Task Date */
+.task-date {
+    white-space: nowrap;
+    color: #6b7280;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-completed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-in-progress {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-on-hold {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Department */
+.department-name {
+    font-weight: 500;
+    color: #111827;
+    white-space: nowrap;
+}
+
+/* Assignee */
+.assignee-container {
+    display: flex;
+    align-items: center;
+}
+
+.assignee-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.avatar-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.assignee-info {
+    flex: 1;
+}
+
+.assignee-name {
+    font-weight: 500;
+    color: #111827;
+    white-space: nowrap;
+}
+
+/* Score */
+.task-score {
+    font-weight: 600;
+}
+
+.score-excellent {
+    color: #059669;
+}
+
+.score-good {
+    color: #2563eb;
+}
+
+.score-average {
+    color: #d97706;
+}
+
+.score-poor {
+    color: #dc2626;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-btn .action-icon {
+    color: #059669;
+}
+
+.edit-btn:hover .action-icon {
+    color: #047857;
+}
+
+.delete-btn .action-icon {
+    color: #dc2626;
+}
+
+.delete-btn:hover .action-icon {
+    color: #b91c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .task-container {
+        padding: 16px;
+    }
+
+    .table-th,
+    .table-td {
+        padding: 12px 16px;
+    }
+
+    .task-name,
+    .task-description {
+        max-width: 150px;
+    }
+
+    .task-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .table-th,
+    .table-td {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .task-name,
+    .task-description {
+        max-width: 120px;
+    }
+
+    .assignee-name {
+        font-size: 12px;
+    }
+
+    .table-footer {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+}
+
+
+.ceo-task-table-title-div{
+    padding-left: 20px;
+    color: #4a5568;
+}
+
+/* Hide columns on very small screens */
+@media (max-width: 480px) {
+    .task-description {
+        display: none;
+    }
+
+    .assignee-name {
+        display: none;
+    }
+
+    .table-th:nth-child(3),
+    .table-td:nth-child(3) {
+        display: none;
+    }
+}

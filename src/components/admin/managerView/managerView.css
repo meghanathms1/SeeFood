@@ -1,0 +1,202 @@
+/* Container */
+.admin-manager-container {
+  width: 100%;
+  height: 100vh;
+  padding-left: 15vw;
+  padding-top: 70px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background: #f5f7fa;
+}
+
+.admin-manager {
+  width: 98%;
+  height: 100%;
+}
+
+/* Table Title */
+.admin-manager-table-title-div {
+  padding-left: 20px;
+  color: #4a5568;
+}
+
+/* Table Container */
+.admin-manager-table-container {
+  background: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  position: relative;
+  padding-top: 20px;
+}
+
+.admin-manager-table-wrapper {
+  overflow-x: auto;
+  max-height: 82vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+.admin-manager-table-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00c4ff, #0073ce, #4f46e5);
+  border-radius: 15px 15px 0 0;
+}
+
+.admin-manager-table {
+  width: max-content;
+  border-collapse: collapse;
+  table-layout: fixed;
+  position: relative;
+}
+
+.admin-manager-table-header {
+  position: sticky;
+  top: 0;
+  background-color: #f9fafb;
+  z-index: 10;
+}
+
+.admin-manager-table-th {
+  padding: 16px 24px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.admin-manager-table-body {
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.admin-manager-table-row {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
+
+.admin-manager-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.admin-manager-table-td {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.task-id-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+/* Score Colors */
+.admin-manager-score {
+  font-weight: 600;
+}
+
+.admin-manager-score-excellent {
+  color: #059669;
+}
+
+.admin-manager-score-good {
+  color: #2563eb;
+}
+
+.admin-manager-score-average {
+  color: #d97706;
+}
+
+.admin-manager-score-poor {
+  color: #dc2626;
+}
+
+/* Action Buttons */
+.admin-manager-action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.admin-manager-action-btn {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.admin-manager-edit-btn {
+   background-color: #1976d2;
+  color: white;
+  font-size: 14px;
+}
+
+.admin-manager-edit-btn:hover {
+     background-color: #1176da;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-manager-table-th,
+  .admin-manager-table-td {
+    padding: 12px 16px;
+  }
+
+  .task-id-badge {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-manager-table-th,
+  .admin-manager-table-td {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .task-id-badge {
+    max-width: 120px;
+  }
+}
+
+/* Hide columns on very small screens */
+@media (max-width: 480px) {
+  .admin-manager-table-th:nth-child(3),
+  .admin-manager-table-td:nth-child(3) {
+    display: none;
+  }
+}
+
+/* Sticky Actions Column */
+.admin-manager-table .admin-manager-table-th:last-child,
+.admin-manager-table .admin-manager-table-td:last-child {
+  position: sticky;
+  right: 0;
+  background-color: #f9fafb;
+  z-index: 5;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.05);
+}

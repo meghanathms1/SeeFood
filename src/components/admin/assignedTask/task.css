@@ -1,0 +1,281 @@
+.admin-task-assign-container {
+    width: 100%;
+    height: 100vh;
+    padding-left: 15vw;
+    padding-top: 70px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background: #f5f7fa;
+}
+
+.admin-task-assign {
+    width: 98%;
+    height: 100%;
+}
+
+/* Table Title */
+.admin-task-assign-table-title-div {
+    padding-left: 20px;
+    color: #4a5568;
+}
+
+/* Table Container */
+.admin-task-assign-table-container {
+    background: #f5f7fa;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    position: relative;
+    padding-top: 20px;
+}
+
+.admin-task-assign-table-wrapper {
+    overflow-x: auto;
+    max-height: 82vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 transparent;
+}
+
+.admin-task-assign-table-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00c4ff, #0073ce, #4f46e5);
+    border-radius: 15px 15px 0 0;
+}
+
+.admin-task-assign-task-table {
+    width: max-content;
+    border-collapse: collapse;
+    table-layout: fixed;
+    position: relative;
+}
+
+.admin-task-assign-table-header {
+    position: sticky;
+    top: 0;
+    background-color: #f9fafb;
+    z-index: 10;
+}
+
+.admin-task-assign-table-th {
+    padding: 16px 24px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.admin-task-assign-table-body {
+    background: #f5f7fa;
+    text-align: center;
+}
+
+.admin-task-assign-table-row {
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease;
+}
+
+.admin-task-assign-table-row:hover {
+    background-color: #f9fafb;
+}
+
+.admin-task-assign-table-td {
+    padding: 16px 24px;
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Task ID */
+.task-id-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+/* Task Name & Description */
+.task-name {
+    font-weight: 500;
+    color: #111827;
+    max-width: 300px;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.task-description {
+    color: #6b7280;
+    max-width: 300px;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+/* Date Fields */
+.task-date {
+    white-space: nowrap;
+    color: #6b7280;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-completed {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-in-progress {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-on-hold {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Department */
+.admin-task-assign-department-name {
+    font-weight: 500;
+    color: #111827;
+    white-space: nowrap;
+}
+
+/* Assignee */
+.admin-task-assign-assignee-container {
+    display: flex;
+    align-items: center;
+}
+
+.admin-task-assign-assignee-info {
+    flex: 1;
+}
+
+.admin-task-assign-assignee-name {
+    font-weight: 500;
+    color: #111827;
+    white-space: nowrap;
+}
+
+/* Score Colors */
+.admin-task-assign-task-score {
+    font-weight: 600;
+}
+
+.admin-task-assign-score-excellent {
+    color: #059669;
+}
+
+.admin-task-assign-score-good {
+    color: #2563eb;
+}
+
+.admin-task-assign-score-average {
+    color: #d97706;
+}
+
+.admin-task-assign-score-poor {
+    color: #dc2626;
+}
+
+/* Action Buttons */
+.admin-task-assign-action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.admin-task-assign-action-btn {
+    background: none;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+/* Edit Button Text */
+.admin-task-assign-edit-btn {
+    background-color: #e72300;
+    color: white;
+    font-size: 14px;
+}
+
+.admin-task-assign-edit-btn:hover {
+    background-color: #e72300;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-task-assign-table-th,
+    .admin-task-assign-table-td {
+        padding: 12px 16px;
+    }
+
+    .task-name,
+    .task-description {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 640px) {
+    .admin-task-assign-table-th,
+    .admin-task-assign-table-td {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .task-name,
+    .task-description {
+        max-width: 120px;
+    }
+}
+
+/* Hide columns on very small screens */
+@media (max-width: 480px) {
+    .admin-task-assign-table-th:nth-child(3),
+    .admin-task-assign-table-td:nth-child(3),
+    .admin-task-assign-assignee-name {
+        display: none;
+    }
+}
+
+/* Sticky Actions Column */
+.admin-task-assign-task-table .admin-task-assign-table-th:last-child,
+.admin-task-assign-task-table .admin-task-assign-table-td:last-child {
+    position: sticky;
+    right: 0;
+    background-color: #f9fafb;
+    z-index: 5;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.05);
+}

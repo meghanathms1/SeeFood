@@ -1,0 +1,134 @@
+.manager-mytask-task-table-container {
+    width: 100%;
+    height: 98%;
+    background: #f5f7fa;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.manager-mytask-task-table-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00c4ff, #0073ce, #4f46e5);
+    border-radius: 15px 15px 0 0;
+}
+
+.manager-mytask-table-title {
+    margin: 0;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b7280;
+    padding-bottom: 0;
+}
+
+.manager-mytask-table-wrapper {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.manager-mytask-task-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+.manager-mytask-task-table th,
+.manager-mytask-task-table td {
+    text-align: center;
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #374151;
+}
+
+.manager-mytask-task-table th {
+    background: #f5f7fa;
+    font-weight: 600;
+    color: #6b7280;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.manager-mytask-task-id {
+    background: #2563eb;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
+}
+
+.manager-mytask-status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+.manager-mytask-action-button button {
+    border: none;
+    outline: none;
+    background: #8b5cf6;
+    color: white;
+    padding: 4px;
+    border-radius: 7px;
+}
+
+.manager-mytask-action-button button:hover {
+    background: #356eff;
+}
+.manager-mytask-score {
+    background: #00c365;
+    padding: 10px;
+    color: white;
+
+    clip-path: circle(50% at 50% 50%);
+}
+.manager-mytask-completed {
+    background: #00c372;
+
+    color: white;
+}
+.manager-mytask-status-badge.manager-mytask-in-progress {
+    background: #0560f2;
+
+    color: white;
+}
+
+.manager-mytask-status-badge.manager-mytask-pending {
+    background: #f59e0b;
+    color: white;
+}
+
+.manager-mytask-status-badge.manager-mytask-onhold {
+    background: #ef4444;
+    color: white;
+}
+
+.manager-mytask-deadline-badge {
+    background: #ef4444;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}

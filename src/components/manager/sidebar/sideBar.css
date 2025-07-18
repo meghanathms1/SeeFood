@@ -1,0 +1,85 @@
+.manager-side-bar-container {
+    margin: 0;
+    padding: 0;
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.manager-side-bar {
+    height: 97%;
+    width: 91%;
+    border-radius: 15px;
+    background: #f5f7fa; /* Light grayish background to match dashboard */
+    border: 1px solid rgba(0, 122, 193, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+.manager-company-logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(9, 113, 206, 0.2);
+    padding: 15px 10px;
+}
+
+.manager-company-logo {
+    width: 140px;
+}
+
+.manager-sidebar-nav {
+    flex: 1;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.manager-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #4a5568; /* Dark gray text for better contrast */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.manager-nav-item:hover {
+    background: rgba(0, 122, 193, 0.1);
+    color: #2d3748; /* Darker text on hover */
+    transform: translateX(5px);
+}
+
+.manager-nav-item.active {
+    background: rgba(0, 122, 193, 0.15);
+    color: #0973ce; /* Blue text for active state */
+    border-left: 3px solid #00c4ff;
+}
+
+.manager-nav-icon {
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.manager-nav-icon svg {
+    font-size: 18px;
+}
+
+.manager-nav-text {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

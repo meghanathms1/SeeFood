@@ -1,0 +1,166 @@
+/* Main container for the department overview widget */
+.admin-department-overview-container {
+    width: 30%;
+    background: #f5f7fa;
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid #d1d1d1;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Decorative top border gradient */
+.admin-department-overview-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00c4ff, #0073ce, #4f46e5);
+    border-radius: 12px 12px 0 0;
+}
+
+/* Main heading */
+.admin-department-overview-container h3 {
+    margin: 0;
+    padding: 24px 24px 0;
+    border-bottom: none;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+/* Scrollable table container */
+.admin-table-container {
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Custom scrollbar styles */
+.admin-table-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.admin-table-container::-webkit-scrollbar-track {
+    border-radius: 3px;
+}
+
+.admin-table-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.admin-table-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Main table styles */
+.admin-department-performance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    font-size: 15px;
+    margin: 16px 0 0 0;
+}
+
+/* Table header styling */
+.admin-table-header {
+    padding: 16px 24px;
+    text-align: center;
+    font-weight: 600;
+    color: #000000;
+    font-size: 14px;
+    background: #f5f7fa;
+    border-bottom: 1px solid #f2f2f2;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1px 0 0 #f1f5f9;
+}
+
+/* General table cell styling */
+.admin-department-performance-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f8fafc;
+    color: #374151;
+    font-size: 15px;
+    background: transparent;
+}
+
+/* Department name cell */
+.admin-department-name {
+    font-weight: 500;
+    color: #374151;
+    text-align: center;
+}
+
+/* Score cell styling */
+.admin-score-cell {
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+    padding-right: 32px;
+}
+
+/* Table row styling */
+.admin-table-row {
+    border-bottom: 1.6px solid rgb(232, 231, 231);
+}
+
+/* Table row hover effect */
+.admin-department-performance-table tbody tr:hover {
+    background: #f8fafc;
+    transition: background-color 0.15s ease;
+}
+
+/* Last row special styling */
+.admin-department-performance-table tbody tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 24px;
+}
+
+/* Score badge styling */
+.admin-score-badge {
+    background: #10b981;
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+    clip-path: circle(50% at 50% 50%);
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .admin-department-overview-container {
+        width: 100%;
+    }
+
+    .admin-table-header,
+    .admin-department-performance-table td {
+        padding: 12px 16px;
+    }
+
+    .admin-department-overview-container h3 {
+        padding: 20px 16px 0;
+        font-size: 18px;
+    }
+
+    .admin-department-performance-table tbody tr:last-child td {
+        padding-bottom: 20px;
+    }
+
+    .admin-score-badge {
+        padding: 4px 8px;
+        font-size: 13px;
+    }
+}
